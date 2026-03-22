@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import KazakhDivider from '../ui/KazakhDivider';
+import artistPortrait from '../../assets/art/artist_portrait.jpg';
 
 const pullQuotes = [
   {
@@ -55,17 +56,19 @@ export default function ArtistStatement() {
           >
             <div className="relative max-w-sm w-full mx-auto">
                <div className="w-full aspect-[4/5] bg-white rounded-2xl shadow-gallery overflow-hidden p-3 border border-stone-200">
-                  <div className="h-full w-full bg-stone-100 flex flex-col items-center justify-center p-8 relative overflow-hidden group">
+                  <div className="h-full w-full bg-stone-100 flex flex-col items-center justify-center relative overflow-hidden group">
                      {/* Background Ornament Subtle */}
                      <div className="absolute inset-0 kazakh-pattern-bg opacity-40 pointer-events-none" />
                      
-                     <div className="relative text-center z-10">
-                        <span className="text-7xl block mb-6 animate-subtle-float">👩‍🎨</span>
-                        <h4 className="font-serif italic text-xl text-stone-900 mb-1">Magira Tleuberdina</h4>
-                        <p className="font-display font-bold text-[10px] uppercase tracking-widest text-stone-400">Astana / Digital Artist</p>
+                     <div className="absolute inset-0 z-10">
+                        <img 
+                          src={artistPortrait} 
+                          alt="Magira Tleuberdina"
+                          className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-1000" 
+                        />
                      </div>
 
-                     <div className="absolute inset-x-0 bottom-0 py-6 border-t border-stone-200 bg-white/50 backdrop-blur-sm">
+                     <div className="absolute inset-x-0 bottom-0 py-6 border-t border-stone-200 bg-white/80 backdrop-blur-sm z-20">
                         <div className="flex justify-around items-center">
                            <div className="text-center">
                               <p className="text-[12px] font-display font-bold text-stone-900">19K</p>

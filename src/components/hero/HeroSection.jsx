@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Instagram, ArrowDown, ShoppingBag } from 'lucide-react';
-import heroImg from '../../assets/art/hero.png';
+import heroImg from '../../assets/art/hero_artwork.jpg';
 
 export default function HeroSection() {
   const scrollToGallery = () => {

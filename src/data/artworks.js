@@ -1,7 +1,9 @@
-import heroImg from '../assets/art/hero.png';
-import heritage1 from '../assets/art/heritage_1.png';
-import pop1 from '../assets/art/pop_1.png';
-import civic1 from '../assets/art/civic_1.png';
+import heroImg from '../assets/art/hero_artwork.jpg';
+import heritage1 from '../assets/art/heritage_1.jpg';
+import pop1 from '../assets/art/pop_1.jpg';
+import civic1 from '../assets/art/civic_1.jpg';
+import art5 from '../assets/art/art_5.jpg';
+import art6 from '../assets/art/art_6.jpg';
 
 export const categories = [
   {
@@ -76,10 +78,9 @@ export const artworks = [
     id: 5,
     title: "Бостандық (Freedom)",
     category: "civic",
-    image: null,
+    image: art5,
     accent: '#E11D48',
-    mockColor: "from-rose-600 to-rose-400",
-    description: "Minimalist commentary on the fight for freedom of expression in Kazakhstan.",
+    description: "Commentary on the fight for freedom of expression in Kazakhstan.",
     tags: ["Civic", "Social", "Red"],
     date: "2022",
     emoji: "🕊️"
@@ -88,9 +89,8 @@ export const artworks = [
     id: 6,
     title: "Zaq — Digital Glow",
     category: "pop",
-    image: null,
+    image: art6,
     accent: '#2563EB',
-    mockColor: "from-blue-600 to-blue-400",
     description: "Electric-hued fan art inspired by the futuristic aesthetics of Ninety One's music videos.",
     tags: ["Pop", "Digital", "Blue"],
     date: "2023",

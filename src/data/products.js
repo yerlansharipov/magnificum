@@ -1,6 +1,6 @@
-import heritage1 from '../assets/art/heritage_1.png';
-import pop1 from '../assets/art/pop_1.png';
-import civic1 from '../assets/art/civic_1.png';
+import heritage1 from '../assets/art/heritage_1.jpg';
+import pop1 from '../assets/art/pop_1.jpg';
+import civic1 from '../assets/art/civic_1.jpg';
 
 export const products = [
   {
