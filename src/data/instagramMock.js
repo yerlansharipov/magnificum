@@ -1,3 +1,10 @@
+import img1 from '../assets/art/art_5.jpg';
+import img2 from '../assets/art/art_6.jpg';
+import img3 from '../assets/art/art_7.jpg';
+import img4 from '../assets/art/art_8.jpg';
+import img5 from '../assets/art/art_9.jpg';
+import img6 from '../assets/art/civic_1.jpg';
+
 export const mockFeedPosts = [
   {
     id: 'mock_001',
@@ -9,6 +16,7 @@ export const mockFeedPosts = [
     timestamp: '2024-03-10T14:30:00+05:00',
     accentColor: '#0D9488',
     category: 'heritage',
+    image: img1,
     emoji: '🏺',
   },
   {
@@ -21,6 +29,7 @@ export const mockFeedPosts = [
     timestamp: '2024-02-28T11:15:00+05:00',
     accentColor: '#E11D48',
     category: 'civic',
+    image: img2,
     emoji: '📢',
   },
   {
@@ -33,6 +42,7 @@ export const mockFeedPosts = [
     timestamp: '2024-02-14T09:00:00+05:00',
     accentColor: '#2563EB',
     category: 'pop',
+    image: img3,
     emoji: '🎵',
   },
   {
@@ -45,6 +55,7 @@ export const mockFeedPosts = [
     timestamp: '2024-01-22T16:45:00+05:00',
     accentColor: '#F59E0B',
     category: 'heritage',
+    image: img4,
     emoji: '☀️',
   },
   {
@@ -57,6 +68,7 @@ export const mockFeedPosts = [
     timestamp: '2024-01-10T13:20:00+05:00',
     accentColor: '#BE185D',
     category: 'civic',
+    image: img5,
     emoji: '🤝',
   },
   {
@@ -69,6 +81,7 @@ export const mockFeedPosts = [
     timestamp: '2023-12-30T21:00:00+05:00',
     accentColor: '#9333EA',
     category: 'pop',
+    image: img6,
     emoji: '🌃',
   },
 ];

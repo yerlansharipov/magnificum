@@ -26,10 +26,13 @@ function FeedPostCard({ post, index }) {
     >
       {/* Post Image Container */}
       <div className="relative aspect-square bg-stone-50 overflow-hidden">
-        {/* Placeholder emoji centering */}
-        <div className="absolute inset-0 flex items-center justify-center filter grayscale opacity-20">
-           <span className="text-5xl">{post.emoji}</span>
-        </div>
+        {(post.image || post.media_url) ? (
+          <img src={post.image || post.media_url} alt={post.caption} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center filter grayscale opacity-20">
+             <span className="text-5xl">{post.emoji}</span>
+          </div>
+        )}
         <div className="absolute inset-0 kazakh-pattern-bg opacity-15 pointer-events-none" />
         
         {/* Overlay hover */}
