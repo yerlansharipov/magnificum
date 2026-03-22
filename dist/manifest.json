@@ -1,0 +1,15 @@
+{
+  "short_name": "Magnificum",
+  "name": "Magnificum — Magira Tleuberdina | Digital Artist",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0D0A1F",
+  "background_color": "#0D0A1F"
+}

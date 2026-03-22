@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-surface text-text-primary font-body antialiased selection:bg-stone-100;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-stone-900;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Minimalist Gallery Card */
+  .gallery-card {
+    @apply bg-white border border-stone-100 rounded-xl overflow-hidden transition-all duration-500 ease-out;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .gallery-card:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(197, 160, 33, 0.2);
+  }
+
+  /* Refined Glass */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  /* Minimal Buttons */
+  .btn-gold {
+    @apply bg-stone-900 text-white font-display font-semibold px-8 py-3.5 rounded-full transition-all duration-300 active:scale-95;
+    background: linear-gradient(135deg, #121212 0%, #2A2A2A 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+
+  .btn-gold:hover {
+    @apply shadow-lg -translate-y-0.5;
+    background: linear-gradient(135deg, #2A2A2A 0%, #121212 100%);
+  }
+
+  .btn-outline {
+    @apply border-2 border-stone-900 text-stone-900 font-display font-semibold px-8 py-3 rounded-full transition-all duration-300;
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    @apply bg-stone-900 text-white;
+  }
+
+  .btn-ghost {
+    @apply text-stone-600 font-display font-semibold px-8 py-3 rounded-full transition-all duration-300;
+    border: 1px solid transparent;
+  }
+
+  .btn-ghost:hover {
+    @apply border-stone-200 text-stone-900 bg-stone-50;
+  }
+
+  /* Section heading Tag */
+  .section-tag {
+    @apply font-display font-bold text-[10px] tracking-[0.25em] uppercase text-stone-400 mb-4 inline-block;
+  }
+
+  /* Gold gradient text - Refined */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #C5A021 0%, #D4AF37 50%, #C5A021 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E5E5;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4D4D4;
+}
+
+/* Subtle Kazakh pattern (watermark style) */
+.kazakh-pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C5A021' fill-opacity='0.02'%3E%3Cpath d='M30 0L60 30L30 60L0 30z'/%3E%3Cpath d='M30 15L45 30L30 45L15 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.kazakh-pattern-gold {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C5A021' fill-opacity='0.03'%3E%3Cpath d='M40 8L72 40L40 72L8 40z'/%3E%3Cpath d='M40 20L60 40L40 60L20 40z'/%3E%3Ccircle cx='40' cy='40' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Image reveal on load */
+.img-reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.img-reveal.loaded {
+  opacity: 1;
+}
+
+/* Masonry gap adjustment for minimal look */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
